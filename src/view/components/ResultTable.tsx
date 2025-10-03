@@ -5,6 +5,11 @@ import { useSubscribe } from '#/view/useSubscribe'
 
 const ZOOM = 8
 
+const map_href = (lat: number, lon: number) =>
+  'https://www.openstreetmap.org/?'
+  + `mlat=${lat}&mlon=${lon}`
+  + `#map=${ZOOM}/${lat}/${lon}`
+
 const commafy = (num: number) => {
   const int = `${Math.abs(num) | 0}`
   let out = '', len, i = len = int.length
@@ -18,11 +23,7 @@ const row = ({ id, vals }: FetchedData[0]) => (
       table-row bg-white border-b border-gray-200
       dark:bg-gray-800 dark:border-gray-700
     `}
-    href={
-      'https://www.openstreetmap.org/?'
-      + `mlat=${vals.lat}&mlon=${vals.lon}`
-      + `#map=${ZOOM}/${vals.lat}/${vals.lon}`
-    }
+    href={map_href(vals.lat, vals.lon)}
     target="_blank"
     rel="noopener noreferrer"
     key={id}
