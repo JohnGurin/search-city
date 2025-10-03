@@ -8,7 +8,7 @@ export const App = () => (
     <QueryGroup />
     <ResultTable />
     <a
-      className=":uno: pos-fixed right-0 bottom-0 m-4"
+      className=":uno: pos-fixed right-0 bottom-0 h-3rem align-middle line-height-3rem px-2 mr-5 backdrop-blur-sm"
       href="https://simplemaps.com/data/world-cities"
       target="_blank"
       rel="noopener noreferrer"
