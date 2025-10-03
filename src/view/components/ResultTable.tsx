@@ -5,6 +5,13 @@ import { useSubscribe } from '#/view/useSubscribe'
 
 const ZOOM = 8
 
+const commafy = (num: number) => {
+  const int = `${Math.abs(num) | 0}`
+  let out = '', len, i = len = int.length
+  while (--i) out = ((len - i) % 3 ? '' : ',') + int.charAt(i) + out
+  return (num < 0 ? '-' : '') + int.charAt(0) + out
+}
+
 const row = ({ id, vals }: FetchedData[0]) => (
   <a
     className={String.raw`:uno:
@@ -22,7 +29,7 @@ const row = ({ id, vals }: FetchedData[0]) => (
   >
     <div className="px-6 py-3 table-cell">{vals.city}</div>
     <div className="px-6 py-4 table-cell text-center">{vals.state}</div>
-    <div className="px-6 py-4 table-cell text-right">{vals.pop}</div>
+    <div className="px-6 py-4 table-cell text-right">{commafy(vals.pop)}</div>
     <div className="px-6 py-4 table-cell w-1">
       <svg
         className="w-3 h-3"
