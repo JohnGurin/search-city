@@ -1,9 +1,10 @@
-import { present, SEARCH_PARAM_NAME, state } from '#/init'
+import { present, SEARCH_PARAM_NAME } from '#/init'
 import { QueryFlags } from '#/model/model'
 
 
 const url = new URL(window.location.href)
-const update_url_search_param = (value: string | number) => {
+
+export const update_url_search_param = (value: string | number) => {
   value
     ? url.searchParams.set(
         SEARCH_PARAM_NAME,
@@ -23,4 +24,3 @@ if (query_init) present.input(
   QueryFlags.CHANGE | QueryFlags.ENTER,
 )
 
-state.query.subscribe(update_url_search_param)
