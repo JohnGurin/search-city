@@ -1,0 +1,46 @@
+{
+  "name": "search-city",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "lint:inspector": "npx @eslint/config-inspector",
+    "lint:strict": "eslint -c eslint.config-strict.ts .",
+    "lint:build": "npm run lint -- --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "fuse.js": "^7.1.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@seahax/eslint-plugin-wrap": "^0.6.8",
+    "@stylistic/eslint-plugin": "^5.4.0",
+    "@types/node": "^24.6.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@unocss/transformer-compile-class": "^66.5.2",
+    "@vitejs/plugin-react": "^5.0.4",
+    "@welldone-software/why-did-you-render": "^10.0.1",
+    "babel-plugin-react-compiler": "^19.1.0-rc.3",
+    "eslint": "^9.36.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.23",
+    "postcss-dropunusedvars": "^2.2.1",
+    "postcss-inline-css-vars": "^0.1.0",
+    "postcss-variable-compress": "^3.0.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.45.0",
+    "unocss": "^66.5.2",
+    "vite": "npm:rolldown-vite@7.1.15",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}

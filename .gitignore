@@ -1,0 +1,12 @@
+/*
+
+!/public
+!/src
+!/src-data
+!/.gitignore
+!/index.html
+!/package*
+!/eslint.config*
+!/tsconfig*
+!/uno.config.ts
+!/vite.config.ts
