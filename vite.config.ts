@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import { viteSingleFile } from 'vite-plugin-singlefile'
 
 import UnoCSS from 'unocss/vite'
 import transformerCompileClass from '@unocss/transformer-compile-class'
@@ -24,6 +25,10 @@ export default defineConfig(({ mode }) => {
           alwaysHash: true,
           trigger: /(["'`]):uno-?(?<name>\S+)?:\s+?(\S[\s\S]*?)\1/g,
         })],
+      }),
+      viteSingleFile({
+        removeViteModuleLoader: true,
+        inlinePattern: ['*.css'],
       }),
     ],
   }
