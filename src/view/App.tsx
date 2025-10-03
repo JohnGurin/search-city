@@ -7,6 +7,14 @@ export const App = () => (
     <Toaster auto_hide_delay_ms={5_000} />
     <QueryGroup />
     <ResultTable />
+    <a
+      className=":uno: pos-fixed right-0 bottom-0 m-4"
+      href="https://simplemaps.com/data/world-cities"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      data source
+    </a>
   </>
 )
 
