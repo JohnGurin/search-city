@@ -27,6 +27,7 @@ export default defineConfig(({ mode }) => {
     : {}
 
   return {
+    base: '/search-city/',
     plugins: [
       tsconfigPaths(),
       react({
