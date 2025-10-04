@@ -40,6 +40,7 @@ export type FetchedData = {
     pop: number
   }
 }[]
+
 export type FetchAction = (
   request_id: RequestId,
   query: string,
@@ -48,7 +49,7 @@ export type FetchAction = (
   ) => void,
 ) => void
 
-type model_cfg = {
+type ModelCfg = {
   input: {
     min_length: number
     max_length: number
@@ -57,7 +58,7 @@ type model_cfg = {
   }
 }
 
-export const mk_model = (CFG: model_cfg) => {
+export const mk_model = (CFG: ModelCfg) => {
   const model_data = {
     query: to_query(''),
     input: '',

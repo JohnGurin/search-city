@@ -8,6 +8,7 @@ export const Result = {
 }
 
 declare const BrandTypeId: unique symbol
+
 export interface Brand<in out K extends string | symbol> {
   readonly [BrandTypeId]: {
     readonly [k in K]: K

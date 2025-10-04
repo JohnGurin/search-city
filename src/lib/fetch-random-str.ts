@@ -4,6 +4,7 @@ import type { FetchAction, FetchedData } from '#/model/model'
 
 const random_string = (len: number) =>
   (Math.random() + 1).toString(36).substring(len)
+
 export const fetch_action: FetchAction = (request_id, query, present) => {
   const delay = rand_in_range(500, 100)
   const is_err = Math.random() > 0.7

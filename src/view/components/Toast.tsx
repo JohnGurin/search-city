@@ -37,7 +37,7 @@ const Toast = (props: ToastConfig) => {
       const tid = setTimeout(set_show, props.auto_hide_delay_ms, false)
       return () => clearTimeout(tid)
     }
-  }, [set_show, err, props.auto_hide_delay_ms])
+  }, [err, props.auto_hide_delay_ms])
 
   return (
     <div

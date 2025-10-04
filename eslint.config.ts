@@ -17,6 +17,9 @@ export default defineConfig([
   pluginImport.flatConfigs.typescript,
   {
     files: ['**/*.{ts,tsx}'],
+    plugins: {
+      'react-hooks': reactHooks,
+    },
     extends: [
       js.configs.recommended,
       tseslint.configs.recommendedTypeChecked,
@@ -30,7 +33,7 @@ export default defineConfig([
         },
       },
       pluginReact.configs.flat['jsx-runtime'],
-      reactHooks.configs['recommended-latest'],
+      'react-hooks/recommended',
       reactRefresh.configs.vite,
     ],
     rules: {
@@ -44,6 +47,18 @@ export default defineConfig([
       ],
       '@stylistic/arrow-parens': ['error', 'as-needed'],
       '@stylistic/no-multiple-empty-lines': ['error', { max: 2 }],
+      '@stylistic/padding-line-between-statements': ['error',
+        {
+          blankLine: 'always',
+          prev: ['multiline-export', 'multiline-type'],
+          next: '*',
+        },
+        {
+          blankLine: 'always',
+          prev: '*',
+          next: ['multiline-export', 'multiline-type'],
+        },
+      ],
       '@typescript-eslint/no-import-type-side-effects': 'error',
       '@typescript-eslint/consistent-type-assertions': ['off', {
         assertionStyle: 'never',
@@ -65,6 +80,10 @@ export default defineConfig([
           ignoreRestSiblings: true,
         },
       ],
+      '@typescript-eslint/naming-convention': ['error', {
+        selector: 'typeLike',
+        format: ['PascalCase'],
+      }],
     },
   },
 ])
