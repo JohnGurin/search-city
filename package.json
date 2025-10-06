@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "lint:ts": "tsc -b --noEmit",
     "lint:inspector": "npx @eslint/config-inspector",
     "lint:strict": "eslint -c eslint.config-strict.ts .",
     "lint:build": "npm run lint -- --max-warnings 0",
