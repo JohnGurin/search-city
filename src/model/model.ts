@@ -23,7 +23,7 @@ const indicator: MkIndicator<string> = indicator_base
 const is_enter = (flags: QueryFlags) => flags & QueryFlags.ENTER
 const is_change = (flags: QueryFlags) => flags & QueryFlags.CHANGE
 
-export enum QueryFlags {
+export const enum QueryFlags {
   CHANGE = 0b01,
   ENTER = 0b10,
 }

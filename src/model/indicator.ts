@@ -1,4 +1,4 @@
-enum Tag {
+const enum Tag {
   IDLE,
   DELAYING,
   LOADING,
